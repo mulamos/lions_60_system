@@ -1,45 +1,95 @@
-<body id="node">
-  <h1>Lion 60 Event Registration</h1>
-  <div class="w-form">
-    <form data-name="Personal Information" id="wf-form-Personal-Information" name="wf-form-Personal-Information" >
-      <label for="name">Name:</label>
-      <input class="w-input" data-name="Name" id="name" maxlength="256" name="name" placeholder="Enter your name" type="text">
-      <label for="email">Email Address:</label>
-      <input class="w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
-      <label for="Address">Home Address:</label>
-      <input class="w-input" data-name="Address" id="Address" maxlength="256" name="Address" placeholder="Enter your address" required="required" type="text">
-      <label for="Club">Club:</label>
-      <input class="w-input" data-name="Club" id="Club" maxlength="256" name="Club" placeholder="Enter the name of the club" required="required" type="text">
-      <div class="w-radio">
-        <input class="w-radio-input" data-name="Location" id="Host Country" name="Location" type="radio" value="Host Country">
-        <label class="w-form-label" for="Host Country">Host Country</label>
-      </div>
-      <div class="w-radio">
-        <input class="w-radio-input" data-name="Location" id="radio" name="Location" type="radio" value="Radio">
-        <label class="w-form-label" for="radio">Other</label>
-      </div>
-      <label for="field">If other please specify:</label>
-      <input class="w-input" id="field" maxlength="256" name="field" placeholder="Please enter country&#39;s name" required="required" type="text">
-      <label>Occupancy Type:</label>
-      <div class="w-radio">
-        <input class="w-radio-input" data-name="Occupancy" id="Single" name="Occupancy" type="radio" value="Single">
-        <label class="w-form-label" for="Single">Single Occupancy</label>
-      </div>
-      <div class="w-radio">
-        <input class="w-radio-input" data-name="Occupancy" id="Double" name="Occupancy" type="radio" value="Double">
-        <label class="w-form-label" for="Double">Double Occupancy</label>
-      </div>
-      <div class="w-radio">
-        <input class="w-radio-input" data-name="Occupancy" id="Triple" name="Occupancy" type="radio" value="Triple">
-        <label class="w-form-label" for="Triple">Triple Occupancy</label>
-      </div>
-      <input class="w-button" data-wait="Please wait..." type="submit" value="Submit">
-    </form>
-    <div class="w-form-done">
-      <div>Thank you! Your submission has been received!</div>
+<DOCTYPE! html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+		<title>Lions 60 Registration Form</title>
+
+		<!-- you can modify this as needed or to your preference -->
+		<link href="regis.css" type="text/css" rel="stylesheet" />
+
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+		<!-- you write this -->
+		<script src="regis.js" type="text/javascript"></script>
+	</head>
+	
+  <body id="node">
+    
+    <div class="header">
+      <img src="https://crestonlions.files.wordpress.com/2014/12/crestonlions2.jpg"></img>
+      <div class="bottom-right"><h1>District 60 Event Registration Form</h1></div>
     </div>
-    <div class="w-form-fail">
-      <div>Oops! Something went wrong while submitting the form</div>
+    
+    <div class="w-form">
+      
+      <form data-name="Personal Information" id="wf-form-Personal-Information" name="wf-form-Personal-Information" action = "General_Control.php" method = "post">
+        
+        <fieldset>
+          <legend><h2>Personal Information</h2></legend>
+          <label for="firstname">First Name:</label>
+          <input class="w-input" data-name="Name" id="firstname" maxlength="256" name="firstname" type="text" required placeholder="Enter your first name">
+          <label for="middleinit">Middle Initial:</label>
+          <input class="w-input" data-name="Name" id="middleinit" maxlength="1" name="middleinit" type="text" required placeholder="Enter middle initial">
+          <label for="lastname">Last Name:</label>
+          <input class="w-input" data-name="Name" id="lastname" maxlength="256" name="lastname" type="text" required placeholder="Enter your last name">
+          <label>
+            Gender:
+            <input type="radio" name="gender_radio" id="gender_radio" value="F"/> F
+            <input type="radio" name="gender_radio" id="gender_radio" value="M"/> M<br><br>
+          </label>
+          <label for="club">Club:</label>
+          <input class="w-input" data-name="club" id="club" maxlength="256" name="club" placeholder="Enter your club" required type="text">
+          <label for="Address">Position:</label>
+          <input class="w-input" data-name="position" id="position" maxlength="256" name="position" placeholder="Enter your position" required type="text">
+          <label for="country">Country:</label>
+          <input type="text" name="country" id="country" maxlength="256" required placeholder="Enter your country"/><br><br>
+          <label for="email">Email Address:</label>
+          <input class="w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="name@domain.com" required type="email">
+          <label for="cell">Cell:</label>
+          <input type="tel" name="cell" id="cell" required placeholder="(XXX)-XXX-XXXX" />
+          <label for="tel">Tel:</label>
+          <input type="tel" name="tel" id="tel" placeholder="(XXX)-XXX-XXXX"/><br><br>
+        </fieldset><br>
+        
+        <fieldset>
+          <legend><h2>Flight Information</h2></legend>
+          <div class="w-radio">
+            <label>
+              Do you live in the host country?
+              <input class="w-radio-input" data-name="Location" id="host_country" name="host_country" type="radio" value="Yes" checked> Yes
+              <input class="w-radio-input" data-name="Location" id="host_country" name="host_country" type="radio" value="No"> No<br><br>
+            </label>
+            
+            <label for="arrival_date">Arrival Date:</label>
+              <input type="text" name="arrival_date" id="arrival_date" placeholder="DD/MM/YYYY"/>
+            <label for="airline">Airline/Flight#:</label>
+              <input type="text" name="airline" id="airline"/>
+            <label for="arrival_time">Arrival Time:</label>
+              <input type="text" name="arrival_time" id="arrival_time"/><br><br>
+            <label for="dep_date">Departure Date:</label>
+              <input type="text" name="dep_date" id="dep_date" placeholder="DD/MM/YYYY"/>
+            <label for="airline">Airline/Flight#:</label>
+              <input type="text" name="airline" id="airline"/>
+            <label for="dep_time">Departure Time:</label>
+              <input type="text" name="dep_time" id="dep_time"/><br><br>
+            <p>*Local Lions please indicate your arrival date at the convention</p>
+            <p>*Overseas Lions please make your airport of choice be "Sangster Intl Airport - Montego Bay"</p>
+          </fieldset><br>
+          
+          <fieldset>
+            <legend><h2>Accomadation Information</h2></legend>
+            <label> 
+              Room Rates:
+              <input class="w-radio-input" data-name="roomrate" id="single" name="roomrate" type="radio" value="single" checked> Single US$245
+              <input class="w-radio-input" data-name="roomrate" id="double" name="roomrate" type="radio" value="double"> Double US$290
+              <input class="w-radio-input" data-name="roomrate" id="triple" name="roomrate" type="radio" value="triple"> Triple US$389
+            </label>
+            <p>NB: These rates include meals & beverages</p>
+          </fieldset><br>
+            <input class="btn" data-wait="Please wait..." type="submit" value="Submit">
+      </form>
     </div>
-  </div>
-</body>
+    
+  </body>
+</html>
