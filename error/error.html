@@ -1,0 +1,20 @@
+
+<html>
+<head>
+<title>Error Script</title>
+
+</head>
+<body>
+  
+<?php
+    if(isset($_GET['msg'])){
+            $error = $_GET['msg'];
+            echo("Error: ".$error);
+    }else{
+            echo('not taken');
+    }
+?>
+
+
+</body>
+</html>

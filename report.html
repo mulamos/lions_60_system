@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    
+		<!-- you can modify this as needed or to your preference -->
+		<link href="index.css" type="text/css" rel="stylesheet" />
+
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+		<!-- you write this -->
+		<script src="report.js" type="text/javascript"></script>
+	</head>
+	
+	<body>
+		
+	    <div id="rep_navbar">
+	        <ul>
+              <li><a class="active" href="report.html">Report</a></li>
+              <li><a href="signup.html" class="toright2">Create User</a></li>
+              <li><a href="index.html" class="toright1">Logout</a></li>
+          </ul>
+	    </div>
+	    
+	    <div id="main_view">
+	    	<!-- This is what will change AJAX no refresh -->
+	    	<h2> Generate Report</h2>
+	    	<fieldset class="account-info1">
+	    		<label for="id_num">Search By Confirmation Number: </label>
+					<input id="id_num" type="text" name="id_num" placeholder="Enter Applicants Confirmation #" /></br>
+					<label>Search For All: <input id="checkbox" type="checkbox" name="all" value="true" /></label></br>
+					<button id="lookup">Lookup</button></br></br>
+		    	<p id="result"> <!-- Where report result will be shown --> </p>
+	    	</fieldset>
+	    </div>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+<DOCTYPE! HTML>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+		    <title>Lions 60 Confirmation</title>
+	    </meta>
+	</head>
+	    <?php
+	        //conc - Confirmation code check
+            if(isset($_GET['conf'])){
+                    $concode = $_GET['conf'];
+                    echo("Confirmation Code Recieved");
+            }else{
+                    header('Location: https://lions-60-system-rand2016.c9users.io/error/error.html?msg=conc failed');
+            }
+        ?>
+	<body>
+	    <p>200 ok $concode
+	</body>
+</html>
+</DOCTYPE!HTML>

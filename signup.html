@@ -1,0 +1,45 @@
+<DOCTYPE! html>
+<html>
+  
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="report.js"></script>
+		<!-- you can modify this as needed or to your preference -->
+		<link href="index.css" type="text/css" rel="stylesheet"/>
+    </head>
+    
+	<body>
+	    <div class="centered">
+	        <div class="header">
+			      <img id="signup_img" src="http://atxcampuslions.org/wp-content/uploads/2016/05/footer-watermark-small.png"></img>
+			      <div class="bottom-centered"><h2>Sign Up District 60 User</h2></div>
+		    	</div> 
+            <form id="signupform">
+                <fieldset class="account-info1">
+                    <label for="firstname">First Name </label>
+                    <input name="firstname" id="fname" type="text" placeholder="Enter first name" required/> <br>
+                
+                    <label for="lastname">Last Name </label>
+                    <input name="lastname" id="lname" type="text" placeholder="Enter last name" required/> <br>
+                
+                    <label for="username">Create a username </label>
+                    <input name="username" id="uname" type="text" placeholder="Enter a username" required/> <br>
+                
+                    <label for="password">Create a password </label>
+                    <input name="password" id="pword" type="password" placeholder="Enter a valid password" required/> <br>
+                    
+                    <label for="cposition">Position </label>
+                    <select name="cposition">
+                        <option value="Registration Chairperson">Registration Chairperson</option>
+                        <option value="Accomadation Chairperson">Accomadation Chairperson</option>
+                        <option value="Transportation Chairperson">Transportation Chairperson</option>
+                        <option value="Treasurer">Treasurer</option>
+                    </select><br><br>
+        
+                    <input value="Submit" id="submit" type="submit" class="button"/>
+                </fieldset>
+            </form>
+            <p id="status"></p>
+        </div>
+	</body>
+</html>
